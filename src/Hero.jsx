@@ -1,3 +1,4 @@
+import {Button} from "@/components/ui/button";
 function Hero() {
   return (
     <section className="py-8 mx-16">
@@ -13,9 +14,10 @@ function Hero() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos
             suscipit est autem quia? Voluptatem?
           </p>
-          <a href="/shop" className="py-2 px-4 text-white font-medium bg-black rounded-md inline-block w-fit">
-              Shop Now
-          </a>
+          <Button className="w-fit" asChild>
+            <a to = "/shop">Shop Now</a>
+          </Button>
+          
         </div>
         <div className="relative">
           <img
