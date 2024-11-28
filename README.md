@@ -1,8 +1,58 @@
-# React + Vite
+# Mebius E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully functional and responsive e-commerce web application built using React.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- User authentication (register, login, logout)
+- Product catalog with search and filter functionality
+- Shopping cart and checkout process
+- Order management for users
+- Responsive design for mobile and desktop
+
+## Technologies Used
+
+- **JavaScript**: Main programming language
+- **React**: Front-end library
+- **CSS**: Styling
+- **HTML**: Markup language
+
+## Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/Bingum-de-Alwis/Mebius-ecommerce.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd Mebius-ecommerce
+    ```
+3. Install dependencies:
+    ```sh
+    npm install
+    ```
+
+## Usage
+
+1. Run the application:
+    ```sh
+    npm start
+    ```
+2. Open your browser and go to `http://localhost:3000`
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any changes.
+
+## License
+
+This project is licensed under the MIT License.
