@@ -7,8 +7,7 @@ function Navigation(props) {
   return (
     <nav className="flex items-center justify-between p-8 mx-16">
       <div className="flex gap-x-16">
-      <Switch />
-
+    
         <a className="font-semibold text-3xl" href="/">
           Mebius
         </a>
@@ -39,11 +38,7 @@ function Navigation(props) {
           
           
         )}
-         <Avatar>
-  <AvatarImage src={props.avatarSrc} />
-  <AvatarFallback>CN</AvatarFallback>
-</Avatar>
-
+        
 
 
       </div>
