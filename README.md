@@ -23,7 +23,7 @@ A fully functional and responsive e-commerce web application built using React.
 
 - **JavaScript**: Main programming language
 - **React**: Front-end library
-- **CSS**: Styling
+- **Tailwind CSS**: Styling
 - **HTML**: Markup language
 
 ## Installation
