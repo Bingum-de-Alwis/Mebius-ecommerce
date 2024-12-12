@@ -1,13 +1,10 @@
 import { ShoppingCart } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Switch } from "@/components/ui/switch"
-
+import { Link } from "react-router";
 
 function Navigation(props) {
   return (
-    <nav className="flex items-center justify-between p-8 mx-16">
+    <nav className="flex items-center justify-between py-8 px-8">
       <div className="flex gap-x-16">
-    
         <a className="font-semibold text-3xl" href="/">
           Mebius
         </a>
@@ -26,21 +23,17 @@ function Navigation(props) {
             </div>
           </a>
         </div>
-        {props.name ? (
-          <p>Hi, {props.name}</p>
-        ) : (
+        {!props.name && (
           <div className="flex items-center gap-4">
-            <a href="/signin">Sign In</a>
-            <a href="/signup">Sign Up</a>
-           
-
+            <Link to="/sign-in" className=" text-primary ">
+              Sign In
+            </Link>
+            <Link to="/sign-up" className=" text-primary ">
+              Sign Up
+            </Link>
           </div>
-          
-          
         )}
-        
-
-
+        {props.name && <p>Hi, {props.name}</p>}
       </div>
     </nav>
   );
