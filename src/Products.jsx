@@ -2,6 +2,7 @@ import ProductCards from "./ProductCards";
 import Tab from "./Tab";
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 function Products() {
   const products = [
@@ -114,9 +115,40 @@ function Products() {
     setSortOrder("desc");
   };
 
+  const getProducts = async () => {
+    // const data = fetch("http://localhost:8000/products", {
+    //   method: "GET",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // });
+    // data
+    //   .then((res) => {
+    //     return res.json();
+    //   })
+    //   .then((data) => console.log(data))
+    //   .catch((err) => console.log(err));
+
+    try {
+      const res = await fetch("http://localhost:8000/products", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <section className="px-8 py-8">
       <h2 className="text-4xl font-bold">Our Top Products</h2>
+      <div>
+        <Button onClick={() => getProducts()}>Get Products</Button>
+      </div>
       <Separator className="mt-2" />
       <div className="flex items-center gap-4 mt-4">
         {categories.map((category) => (
