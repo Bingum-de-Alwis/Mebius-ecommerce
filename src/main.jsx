@@ -8,13 +8,13 @@ import SignInPage from "./pages/sign-in.page";
 import SignUpPage from "./pages/sign-up.page";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/sign-in" element={<SignInPage />} />
-        <Route path="/sign-up" element={<SignUpPage />} />
-      </Routes>
-    </BrowserRouter>
-  </StrictMode>
+  //<StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/sign-in" element={<SignInPage />} />
+      <Route path="/sign-up" element={<SignUpPage />} />
+    </Routes>
+  </BrowserRouter>
+  //</StrictMode>
 );
