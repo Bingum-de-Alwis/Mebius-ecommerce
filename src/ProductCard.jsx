@@ -1,18 +1,22 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "./lib/features/cartSlice";
 
 function ProductCard(props) {
-  const [num, setNum] = useState(0);
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
 
   const handleClick = (e) => {
-    props.handleAddToCart({
-      _id: props._id,
-      name: props.name,
-      price: props.price,
-      image: props.image,
-      description: props.description,
-    });
+    dispatch(
+      addToCart({
+        _id: props._id,
+        name: props.name,
+        price: props.price,
+        image: props.image,
+        description: props.description,
+      })
+    );
   };
 
   return (
@@ -29,7 +33,7 @@ function ProductCard(props) {
       </div>
       <div className="mt-1 p-4">
         <Button className="w-full" onClick={handleClick}>
-          Add to Cart
+          Add To Cart
         </Button>
       </div>
     </Card>
