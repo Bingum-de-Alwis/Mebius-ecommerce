@@ -35,6 +35,14 @@ const formSchema = z.object({
 const ShippingAddressForm = ({ cart }) => {
   const form = useForm({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      line_1: "",
+      line_2: "",
+      city: "",
+      state: "",
+      zip_code: "",
+      phone: ""
+    }
   });
   const [createOrder, { isLoading, isError, data }] = useCreateOrderMutation();
   const navigate = useNavigate();
